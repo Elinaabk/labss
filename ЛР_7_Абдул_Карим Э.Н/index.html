@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+</head>
+  <body>
+    <title>Игра "Угадай число"</title>
+    <div class="mainn">
+      <div class="title_mainn">
+        <div  class="desc">
+            <h1 class="animate__animated animate__backInLeft" class="desc__title">Игра "Угадай число"</h1>
+            <p class="animate__animated animate__pulse" class="chislo"> Угадайте число от 1 до 10</p>
+        </div>
+        <div class="field">
+          <label for="" class="form_label">Ваш ответ: </label>
+          <input type="text" class="form_input" />
+          <p></p>
+          <button class="form_btn">Проверка</button>
+          <p></p>
+          <button class="form_btn1" onclick="location.reload(); return false;">
+            Начать заново!
+        </button>
+        </div>
+        <div class="res">
+          <div class="res_check">
+            <span class="res_check_label">Результат:</span>
+            <span class="res_check"></span>
+          </div>
+          <div class="res_help">
+            <span class="res_help">Подсказка:</span>
+            <span class="res_help_out"></span>
+          </div>
+          <div class="res_count">
+            <span class="res_count_label">Осталось попыток:</span>
+            <span class="res_count"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

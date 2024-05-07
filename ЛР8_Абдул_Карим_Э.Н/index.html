@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <script src="/js/script.js"></script>
+    <style>
+      .blocks {
+            animation-name: slidein;
+            animation-duration: 4s;
+        }
+        @keyframes slidein {
+            from {
+                transform: translateY(-30%);
+            }
+            to {
+                transform: translateY(0%);
+            }
+        }
+        .btn {
+            position: relative;
+            animation: mymove 4s;
+        }
+        @keyframes mymove {
+            0%   {
+                background-color: aqua;
+                top: 0px;}
+            50%  {
+                background-color: rgb(106, 255, 0);
+                top: 50px;}
+            75%  {
+                background-color: rgb(208, 255, 0);
+                top: 100px;}
+            100%  {top: 0px;}
+        }
+        .form_btn1 {
+            width: 50%;
+            -webkit-transition: width 2s;
+            transition: width  background-color 2s;
+            
+            
+        }
+
+        .form_btn1:hover {
+            width: 100%;
+            background-color: rgb(240, 188, 142);
+            }
+        
+        .btn{
+            color: black;
+            width: 50%;
+            -webkit-transition: width 2s;
+            transition: width  background-color 2s;
+        }
+        .btn:hover{
+            width: 100%;
+            background-color: rgb(251, 166, 130);
+            color: white;
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="img/logo.png" alt="pic">
+            <div class="wrapper">
+                <div class="offer">
+                    <h1 class="title">С помощью нас<br> вы сможете создать то, о чем </h1>
+                    <span class="title_span">желаете!</span>
+                    <p class="offer_text animate__animated animate__backInLeft">Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас!
+                         И знаем это на все 100%. Вас не остановить!
+                    </p>
+                    <a href="#" class="btn">Узнать больше ...</a>
+                </div>
+                <img class="header_img animate__animated animate__bounce" src="img/header-img.png" alt="pic">
+                
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h2 class="main_title">Что Вам необходимо?</h2>
+            <div class="main_block">
+                <div class="blocks">
+                    <img src="img/f3.png" alt="pic">
+                    <h3>Первый блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+                <div class="blocks">
+                    <img src="img/f4.png" alt="pic">
+                    <h3>Второй блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                </div>
+                <div class="blocks">
+                    <img src="img/f5.png" alt="pic">
+                    <h3>Третий блок</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <section class="frm2">
+        <div class="container">
+            <h2 class="main_title">Форма заказа услуги</h2>
+
+        <form class="form2" id="form_2" action="#" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="zakaz">Введите имя:</div>
+                <div class="zakaz"><input class="zakaz_form" id="first" type="text" onblur="checkFirst();" required /></div>
+                <div class="zakaz"><span id="first_Check"></span></div>
+            </div>
+            <div class="row">
+                <div class="zakaz">Введите фамилию:</div>
+                <div class="zakaz"><input class="zakaz_form" id="last" type="text" onblur="checkLast();" required /></div>
+                <div class="zakaz"><span id="last_Check"></span></div>
+            </div>
+            <div class="row">
+                <div class="zakaz">Введите номер телефона +7-ХХХ-ХХХ-ХХ-ХХ:</div>
+                <div class="zakaz"><input class="zakaz_form" id="phone" type="text" onblur="checkPhone();" required /></div>
+                <div class="zakaz"><span id="phone_Check"></span></div>
+            </div>
+            <div class="row">
+                <div class="zakaz">Введите свой E-mail</div>
+                <div class="zakaz"><input class="zakaz_form" id="email" type="text" onblur="checkEmail();" required /></div>
+                <div class="zakaz"><span id="email_Check"></span></div>
+            </div>
+            <div class="row">
+                <div class="zakaz">Введите дату:</div>
+                <div class="zakaz"><input class="zakaz_form" id="date" type="date" onblur="checkDate();" required /></div>
+                <div class="zakaz"><span id="date_Check"></span></div>
+            </div>
+            <div class="row">
+                <div class="zakaz"><span id="sendOrder" onclick="outputData();">Отправить заявку!</span></div>
+            </div>
+        
+        </div>
+    <div class="zakaz orderSummary">                        
+        <div class="zakaz">
+            <span id="summary"></span>
+        </div>
+        </form>
+    </div>
+
+
+    </section>
+    <section class="frm">
+        <div class="container">
+            <h2 class="main_title">Форма заказа обратного звонка</h2>
+            <form class="form">
+                <p><input class="zvonok" type="text" id="" value="" name="" placeholder="Имя" required></p>
+                <p><input class="zvonok" type="text" id="" value="" name="" placeholder="Введите свой E-mail" required></p>
+                <p><input class="zvonok" type="tel" placeholder="Телефон" required></p>
+                <p><input class="zvonok" type="text" id="" value="" name="" placeholder="Какие темы вас интересуют?" required></p>
+                <button class="form_btn1" type="submit">Отправить вопрос!</button>
+            </form>
+        </div>
+    </section>
+    <section class="konec">
+        <p>© Все на этом сайте защищено</p>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
